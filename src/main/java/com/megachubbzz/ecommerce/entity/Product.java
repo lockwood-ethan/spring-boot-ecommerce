@@ -13,41 +13,41 @@ import java.util.Date;
 @Data
 public class Product {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "id")
-  private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	public Long id;
 
-  @ManyToOne
-  @JoinColumn(name = "category_id", nullable = false)
-  private ProductCategory category;
+	@ManyToOne
+	@JoinColumn(name = "category_id", nullable = false)
+	public ProductCategory category;
 
-  @Column(name = "sku")
-  private String sku;
+	@Column(name = "sku")
+	public String sku;
 
-  @Column(name = "name")
-  private String name;
+	@Column(name = "name")
+	public String name;
 
-  @Column(name = "description")
-  private String description;
+	@Column(name = "description")
+	public String description;
 
-  @Column(name = "unit_price")
-  private BigDecimal unitPrice;
+	@Column(name = "unit_price")
+	public BigDecimal unitPrice;
 
-  @Column(name = "image_url")
-  private String imageUrl;
+	@Column(name = "image_url")
+	public String imageUrl;
 
-  @Column(name = "active")
-  private boolean active;
+	@Column(name = "active")
+	public boolean active;
 
-  @Column(name = "units_in_stock")
-  private int unitsInStock;
+	@Column(name = "units_in_stock")
+	public int unitsInStock;
 
-  @Column(name = "date_created")
-  @CreationTimestamp
-  private Date dateCreated;
+	@Column(name = "date_created")
+	@CreationTimestamp
+	public Date dateCreated;
 
-  @Column(name = "last_updated")
-  @UpdateTimestamp
-  private Date lastUpdated;
+	@Column(name = "last_updated")
+	@UpdateTimestamp
+	public Date lastUpdated;
 }
